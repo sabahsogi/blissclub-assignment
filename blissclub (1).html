@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blissclub Denims Launch Strategy</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1a1a2e;--bg:#fdf5f3;--denim:#2c3e6b;--denim-light:#4a6491;--denim-wash:#8fa4c9;--blush:#f7ebe4;--text:#2d2d3a;--text-light:#6b6b7b;--border:#e0dcd6;--coral-light:#fceee9}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:15px;font-weight:300}
+.container{max-width:820px;margin:0 auto;padding:0 24px}
+.hero{padding:80px 0 60px;text-align:center}
+.hero-eyebrow{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--denim-light);margin-bottom:20px;font-weight:500}
+.hero h1{font-family:'Instrument Serif',serif;font-size:52px;font-weight:400;color:var(--ink);line-height:1.15;margin-bottom:16px}
+.hero h1 em{font-style:italic;color:var(--denim)}
+.hero-sub{font-size:16px;color:var(--text-light);max-width:520px;margin:0 auto;font-weight:300}
+.divider{width:40px;height:1px;background:var(--denim-wash);margin:50px auto}
+section{margin-bottom:60px}
+.section-label{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--denim-light);margin-bottom:8px;font-weight:500}
+.section-heading{font-family:'Instrument Serif',serif;font-size:34px;font-weight:400;color:var(--ink);margin-bottom:20px;line-height:1.3;text-transform:uppercase;letter-spacing:1px}
+h2{font-family:'Instrument Serif',serif;font-size:32px;font-weight:400;color:var(--ink);margin-bottom:20px;line-height:1.3}
+.sub-heading{font-family:'DM Sans',sans-serif;font-size:15px;font-weight:300;color:var(--text-light);margin-bottom:8px}
+h3{font-family:'Instrument Serif',serif;font-size:22px;font-weight:400;color:var(--denim);margin-bottom:12px;margin-top:32px}
+p{margin-bottom:16px;color:var(--text)}
+.aside-note{font-family:'Instrument Serif',serif;font-style:italic;color:var(--denim-light);font-size:22px;margin:24px 0}
+.highlight-box{background:var(--blush);border-radius:8px;padding:24px 28px;margin:24px 0}
+.highlight-box p:last-child{margin-bottom:0}
+.denim-card{border:1px solid var(--border);border-radius:8px;padding:28px;margin:20px 0;background:white}
+.denim-card h4{font-family:'Instrument Serif',serif;font-size:20px;color:var(--denim);margin-bottom:12px;font-weight:400;display:flex;align-items:center;gap:10px}
+.denim-card p{font-size:14px}
+.pi{width:22px;height:22px;display:inline-block;vertical-align:middle}
+.bucket{border-left:3px solid var(--denim-wash);padding-left:24px;margin:28px 0}
+.bucket-number{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--denim-light);font-weight:500;margin-bottom:4px}
+.bucket h3{margin-top:0}
+.ptag{display:inline-block;font-size:12px;letter-spacing:0.5px;background:var(--coral-light);color:var(--denim);padding:3px 12px;border-radius:20px;margin-right:6px;margin-bottom:6px;font-weight:500;border:1px solid var(--border)}
+.task-label{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:white;background:var(--denim);padding:4px 14px;border-radius:20px;display:inline-block;margin-bottom:16px;font-weight:500}
+.calendar-wrapper{margin:40px 0}
+.calendar-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}
+.cal-day{background:white;border:1px solid var(--border);border-radius:8px;padding:14px;cursor:pointer;transition:all .2s;min-height:100px}
+.cal-day:hover{border-color:var(--denim);box-shadow:0 4px 20px rgba(44,62,107,.12);transform:translateY(-2px)}
+.cal-day.pre{background:#f5f5f5;border:1px dashed var(--border)}
+.cal-day-number{font-family:'Instrument Serif',serif;font-size:22px;color:var(--denim);margin-bottom:4px}
+.cal-day-label{font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--text-light);font-weight:500}
+.cal-day-tags{margin-top:8px;display:flex;flex-wrap:wrap;gap:3px}
+.ct{font-size:8px;padding:2px 6px;border-radius:10px;font-weight:500;letter-spacing:.5px;text-transform:uppercase}
+.ct.s{background:#e8d5f5;color:#6b3fa0}.ct.m{background:#d5eef5;color:#2a7a8f}.ct.b{background:#f5e6d5;color:#8f6a2a}.ct.u{background:#d5f5e0;color:#2a8f4a}.ct.f{background:var(--denim);color:#fff}.ct.st{background:#fce4ec;color:#c62828}
+.cal-popup{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:#fff;border-radius:12px;padding:36px;max-width:560px;width:90%;box-shadow:0 20px 60px rgba(0,0,0,.15);z-index:100;max-height:80vh;overflow-y:auto}
+.cal-popup.active{display:block}
+.cal-popup h4{font-family:'Instrument Serif',serif;font-size:22px;color:var(--denim);margin-bottom:4px}
+.cal-popup .dl{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--text-light);margin-bottom:16px;font-weight:500}
+.cal-popup p{font-size:14px;margin-bottom:10px}
+.cal-popup strong{color:var(--denim);font-weight:500}
+.pc{position:absolute;top:16px;right:20px;background:none;border:none;font-size:20px;cursor:pointer;color:var(--text-light)}
+.overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(26,26,46,.4);z-index:99}
+.overlay.active{display:block}
+.sb{display:flex;gap:16px;margin:12px 0;align-items:flex-start}
+.st{font-size:12px;font-weight:600;color:var(--denim);min-width:60px;padding-top:2px}
+.sd{flex:1}
+.dg{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0}
+.dc{background:#fff;border:1px solid var(--border);border-radius:8px;padding:20px}
+.dc.w{border-color:var(--denim);background:linear-gradient(135deg,#fff,#f0f3f9)}
+.dc h4{font-family:'Instrument Serif',serif;font-size:16px;color:var(--denim);margin-bottom:4px}
+.dm{font-size:12px;color:var(--text-light);margin-bottom:8px}
+.dv{font-size:13px;color:var(--text)}
+.ri{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0}
+.ri img{width:100%;border-radius:8px;border:1px solid var(--border)}
+@media(max-width:600px){.hero h1{font-size:36px}h2,.section-heading{font-size:26px}.calendar-grid{grid-template-columns:repeat(2,1fr)}.dg{grid-template-columns:1fr}.ri{grid-template-columns:1fr}}
+.fade-up{opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="hero fade-up">
+<div class="hero-eyebrow">Blissclub Denim Launch</div>
+<h1>10 Days <em>(and beyond)</em> of Denim</h1>
+<p class="hero-sub">A social media launch strategy for Blissclub's category-defining denim collection.</p>
+</div>
+
+<div class="divider"></div>
+
+<section class="fade-up">
+<div class="section-label">Prologue</div>
+<h2>Hello! Welcome to my thought bubble.</h2>
+<p>Just some wonderments I had while making this campaign.</p>
+<p>Before getting into it, I wanted to understand what Blissclub is actually saying when they launch denims. So basically not "hey look we make jeans now" and more "we spent 2 years engineering something that looks like denim but moves like nothing you've worn before".</p>
+<p>This distinction really matters in how it'll reflect on our channels. Blissclub was built on the notion of movement and comfort which is a story we have to prove and not just announce. So I thought of all content to establish the belief that these denims move differently and look at us wear them. Look at the people around us wear them. Show, less tell.</p>
+<p>I also want to call out something about content buckets in general. I find them useful to help prioritise messaging and clarify what we want to say. But they can get limiting pretty fast if we treat them as permanent categories, especially for a single product line. I think the best social content lives in overlaps between buckets. So I'd use these as a stepping stone for the 10-day window and then let the content evolve based on what the audience responds to.</p>
+<p class="aside-note">Anywayyyy:*</p>
+</section>
+
+<section class="fade-up">
+<span class="task-label">Task 1</span>
+<div class="section-heading">Here are some buckets</div>
+
+<div class="bucket"><div class="bucket-number">Bucket 1</div><h3>Styling Denims</h3>
+<p>How to pair, how to wear, how to make these denims work for your life. The visual style here is someone's closet, not a studio. We show styles that are accessible; pieces that work for our demographic in India, can be mixed with basics and wardrobe staples people already own, and look put-together without looking like a brand shoot. What kind of shoes work with what style of denims (like high heels to bootcuts with flare, sneakers to straight denims, etc.)</p>
+<p>This branches into:</p>
+<p><span class="ptag">Instagram</span> Fashion creators and stylists doing moment-specific content. Denims for summer, monsoon, office, dates, airport, brunch. Creators like ashamode_ who have eccentric taste and can show that comfort doesn't have to be a template, it can be anything you want it to be. 60 sec max reels + saveable/shareable carousels that are like infographics.</p>
+<p><span class="ptag">Pinterest</span> This is our visual search engine. People come to Pinterest looking for solutions ("what to wear with bootcut jeans," "denim outfit ideas for work"). Our goal here is to answer those searches with helpful, pinnable imagery. We create styling boards ("Denim for every mood") and tie in a UTM strategy so we can track traffic back to the product page. This is a long-tail discovery thing which will keep content working months after launch.</p>
+<div class="ri"><img src="ref-styling.png" alt="Styling reference: flat lay outfit combinations"><img src="ref-shoes.jpeg" alt="Reference: denim and shoes pairing guide"></div>
+</div>
+
+<div class="bucket"><div class="bucket-number">Bucket 2</div><h3>Prove It Moves</h3>
+<p>The core product truth basically. These denims move differently and we're going to prove it. But not in a studio. Not in a controlled environment. In actual places where these movements belong. Skateboarding in denims at Cubbon Park. Climbing at Equilibrium and showing the full circuit in a timelapse. A dance choreography shot at home. Essentially a 24-hour stress test; a montage of someone wearing the jeans through a whole active day: biking to work, full day at office, cooking for guests, gym in the evening, still looking good at dinner.</p>
+<p>We can extend this to collaborations with actual communities and spaces: "Today I'm at say a Chakra or an Equilibrium and I'm going to show you that I can climb even in denim." The community lends credibility (climbers are obsessive about what they wear) and the content photographs well. GoPro/Opus clips for skateboarding and skating, timelapse for the climbing circuit. This bucket has room for longer-form content (up to 90 sec) because the visual proof IS the hook.</p>
+</div>
+
+<div class="bucket"><div class="bucket-number">Bucket 3</div><h3>2 Years in the Making</h3>
+<p>Behind the scenes of what went into building this product. The designers, the fabric sourcing, the factory, the people making it, the early customer feedback, what R&amp;D led them here. This is the credibility bucket. It justifies the premium price point without ever saying "this is why it costs what it costs."</p>
+<p>This one will be shot with quality production since it's also going up on LinkedIn as the founder video. Think of it as a short documentary feel (2-2.5 mins max) but it should still feel honest and transparent, not like a brand film. We'll show the messy parts, the n number of fabric iterations, stuff that didn't work, maybe the first prototype that looked terrible. All of that leading to our final baby which is what we're showcasing today.</p>
+<p>Minu's voice will anchor this content. She'll talk about why we made the decision to enter denim, what we learned, what surprised us. This is the bucket where we flex the engineering without it feeling like a technical blueprint.</p>
+</div>
+
+<div class="bucket"><div class="bucket-number">Bucket 4</div><h3>UGC / Community</h3>
+<p>We post reviews on websites but here we're actually going to repost our customers and creators wearing our denims. Mix of stories and carousels on IG.</p>
+<p><strong>The seeding strategy:</strong> We send our denims + a PR box with a few complimentary items. A stanley-ish cup maybe, a nice chapstick, a Blissclub merched keychain and a card that says "some other sweet things for women on the go, and yes, they all fit in your pockets." Because pockets have always been important to us and this is a cute, on-brand way to reinforce that.</p>
+<p>My brief to creators will be open for them to do whatever they want but my defining mandatory would be to show how the pants are not just good looking but good feeling too. Show and describe functionality in a way that doesn't feel like an ad. That's it.</p>
+<p>Think someone like <strong>@aasttha.s</strong> who is not just a gym girlie. She's fun and messy and functional and gorgeous while she's at it. Her content could be something like "these aren't just comfy on my shoots but even when I travel and play with my niece and go to the gym. Maybe I'll just live in them rent free."</p>
+<p>There's also a potential brand collab idea we can explore with someone like a <strong>Kusha Kapila</strong> who could be talking about her adhesive bra but naturally segues into "also the pants are Blissclub, they're comfy, they're gorgeous, and I don't expect anything less when it comes to comfort and looking good." The collab here is with a non-competing but complementary product so it works for both of us plus both our audiences.</p>
+</div>
+</section>
+
+<div class="divider"></div>
+
+<section class="fade-up">
+<div class="sub-heading">Now, let's get into the fun part.</div>
+<div class="section-heading">Platform Strategy</div>
+
+<div class="denim-card"><h4><svg class="pi" viewBox="0 0 24 24" fill="none"><linearGradient id="ig" x1="0" y1="24" x2="24" y2="0"><stop stop-color="#feda75"/><stop offset=".3" stop-color="#fa7e1e"/><stop offset=".6" stop-color="#d62976"/><stop offset="1" stop-color="#962fbf"/></linearGradient><rect width="22" height="22" x="1" y="1" rx="6" stroke="url(#ig)" stroke-width="1.5" fill="none"/><circle cx="12" cy="12" r="4.5" stroke="url(#ig)" stroke-width="1.5" fill="none"/><circle cx="18" cy="6" r="1.2" fill="url(#ig)"/></svg> Instagram — P0 Platform</h4>
+<p>Reels lead at 70%, optimised for saves and shares. The remaining 30% is for carousels/statics and stories.</p>
+<p><strong>Reels breakdown:</strong> 3 styling pieces (60 sec max, closet-shot) · 2 "Prove it moves" (real locations, up to 90 sec) · 2 BTS/The Making (well produced, 2.5 min max) · 3 UGC/creator posts (sustained through launch)</p>
+<p><strong>Carousels/Statics:</strong> They're not just adapts for paid. Styling guides as carousels get saved since people constantly refer back to them. I'd also stylistically convey the blueprint of how our denims are made: material composition, features, specs, all those nitty gritties.</p>
+<p><strong>Stories:</strong> Daily during the 10-day window. Polls ("would you work out in denim?"), countdowns pre-launch without announcing what we're launching and just tease with clues, "this or that" styling options, BTS from shoots, reposts of UGC as it comes in.</p>
+<p><strong>Branded content ads:</strong> Take the best-performing organic creator content and boost it as paid. If creator content outperforms owned content, we lean into that.</p>
+</div>
+
+<div class="denim-card"><h4><svg class="pi" viewBox="0 0 24 24"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z" fill="#0A66C2"/></svg> LinkedIn</h4>
+<p><strong>Track 1: Founder voice.</strong> Minu posts the "The Making" video with a written post about the R&amp;D journey. Not a product launch announcement really but something more human. The founder's reflection on why they chose to enter into this new category, what they learned, and what this says about where Blissclub is going.</p>
+<p><strong>Track 2: Employee and team content.</strong> A "pass the mic" series where Blissclub employees talk about their experiences with the denims and what this launch means to them. The designer can talk about the x number of fabric and design iterations. The sales and marketing folks talk about early customer reactions. Then we invite other women to "take the mic."</p>
+</div>
+
+<div class="denim-card"><h4><img class="pi" src="threads-logo.png" alt="Threads"> Threads</h4>
+<p>Our IG audience is already here and has direct access to us. Threads is where our brand personality lives without the pressure of production. The voice here is conversational, young, easy breezy. Not Duolingo unhinged also but something light and respectful while also being cheeky and edgy. We're not posting reels here really. More thoughts, wonderments, reactions, observations.</p>
+<p>We'll engage with people here. Start conversations. Ask questions. "What's the one thing you refuse to give up comfort for?" And on that note this is also the place where we speak beyond just our products. We can talk about literally anything under the sun (so long as that conversation is relevant to us) like movement, ambition, the things that intersect with our playbook essentially.</p>
+</div>
+
+<div class="denim-card"><h4><svg class="pi" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" fill="#000"/></svg> X</h4>
+<p>I'd lean in more on Threads than X tbh. But that doesn't mean we exclude this platform at all, this is where journalists, industry folk, KOFs come, where press pickups happen, we can use this place to scan conversations and participate where it makes sense.</p>
+</div>
+
+<div class="denim-card"><h4><img class="pi" src="pinterest-logo.png" alt="Pinterest"> Pinterest</h4>
+<p>Styling carousel content gets pinned. Boards like "How to style denim: lazy girl's guide" with outfit ideas. For sure UTM everything for long-tail discovery. Our goal here is to be the answer when someone searches "how to style bootcut jeans India" or "comfortable denim outfit ideas."</p>
+</div>
+
+<div class="denim-card"><h4><svg class="pi" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" fill="#1877F2"/></svg> Facebook</h4>
+<p>Nothing original for us to do here but again not to be excluded. I'd do paid here with targeted formats. Can deprio budgets here.</p>
+</div>
+</section>
+
+<div class="divider"></div>
+
+<section class="fade-up">
+<div class="section-heading">The 10-Day Calendar</div>
+<p>Click on any day to see the full breakdown.</p>
+<div class="calendar-wrapper"><div class="calendar-grid">
+<div class="cal-day pre" onclick="openPopup('pre1')"><div class="cal-day-number">P1</div><div class="cal-day-label">Pre-Launch</div><div class="cal-day-tags"><span class="ct st">Stories</span><span class="ct b">Tease</span></div></div>
+<div class="cal-day pre" onclick="openPopup('pre2')"><div class="cal-day-number">P2</div><div class="cal-day-label">Pre-Launch</div><div class="cal-day-tags"><span class="ct st">Stories</span><span class="ct b">BTS</span></div></div>
+<div class="cal-day" onclick="openPopup('d1')"><div class="cal-day-number">01</div><div class="cal-day-label">Launch Day</div><div class="cal-day-tags"><span class="ct f">Film</span><span class="ct b">BTS</span></div></div>
+<div class="cal-day" onclick="openPopup('d2')"><div class="cal-day-number">02</div><div class="cal-day-label">Product</div><div class="cal-day-tags"><span class="ct b">Blueprint</span><span class="ct s">Styling</span></div></div>
+<div class="cal-day" onclick="openPopup('d3')"><div class="cal-day-number">03</div><div class="cal-day-label">Movement</div><div class="cal-day-tags"><span class="ct m">Prove It</span><span class="ct u">UGC</span></div></div>
+<div class="cal-day" onclick="openPopup('d4')"><div class="cal-day-number">04</div><div class="cal-day-label">Community</div><div class="cal-day-tags"><span class="ct u">Creator</span><span class="ct st">Stories</span></div></div>
+<div class="cal-day" onclick="openPopup('d5')"><div class="cal-day-number">05</div><div class="cal-day-label">Depth</div><div class="cal-day-tags"><span class="ct b">Making Of</span><span class="ct s">Carousel</span></div></div>
+<div class="cal-day" onclick="openPopup('d6')"><div class="cal-day-number">06</div><div class="cal-day-label">Movement</div><div class="cal-day-tags"><span class="ct m">Prove It</span><span class="ct u">UGC</span></div></div>
+<div class="cal-day" onclick="openPopup('d7')"><div class="cal-day-number">07</div><div class="cal-day-label">Style</div><div class="cal-day-tags"><span class="ct s">Styling</span><span class="ct u">Creator</span></div></div>
+<div class="cal-day" onclick="openPopup('d8')"><div class="cal-day-number">08</div><div class="cal-day-label">Styling</div><div class="cal-day-tags"><span class="ct s">Styling</span><span class="ct u">UGC</span></div></div>
+<div class="cal-day" onclick="openPopup('d9')"><div class="cal-day-number">09</div><div class="cal-day-label">Creator</div><div class="cal-day-tags"><span class="ct u">Creator</span><span class="ct m">Collab</span></div></div>
+<div class="cal-day" onclick="openPopup('d10')"><div class="cal-day-number">10</div><div class="cal-day-label">Forward</div><div class="cal-day-tags"><span class="ct f">Recap</span><span class="ct s">Carousel</span></div></div>
+</div></div>
+</section>
+
+<div class="overlay" id="overlay" onclick="closePopup()"></div>
+
+<div class="cal-popup" id="pre1"><button class="pc" onclick="closePopup()">&#10005;</button><div class="dl">Pre-Launch Day 1</div><h4>Building anticipation</h4><div><p><strong>Instagram Stories:</strong> Countdown sticker with a cryptic clue. Close-up of denim texture, no product reveal. Poll: "Would you work out in denim?" No branding, just curiosity.</p><p><strong>Threads:</strong> Cryptic BTS. A shot from the film shoot without full context. "Something's cooking." Let people wonder.</p><p><strong>Internal:</strong> PR mailers go out to first wave of creators (aasttha.s, ashamode_, 3-4 others). The seeding kit with denims + complimentary items + "fits in your pockets" card.</p></div></div>
+
+<div class="cal-popup" id="pre2"><button class="pc" onclick="closePopup()">&#10005;</button><div class="dl">Pre-Launch Day 2</div><h4>The tension builds</h4><div><p><strong>Instagram Stories:</strong> Another clue. BTS shot from the film shoot (no full reveal). "This or that" poll on denim styles (bootcut vs straight).</p><p><strong>Threads:</strong> More cryptic BTS. A snippet of the song playing in the background. A fabric swatch shot. Still no product reveal.</p><p><strong>X:</strong> A single cryptic post. "2 years. 47 iterations. Tomorrow."</p></div></div>
+
+<div class="cal-popup" id="d1"><button class="pc" onclick="closePopup()">&#10005;</button><div class="dl">Day 1 — Launch Day</div><h4>The big reveal. Everything drops.</h4><div><p><strong>Instagram (Reel):</strong> THE LAUNCH FILM. "Yeh Mera Dil" choreographed film drops. Hero piece. Pin to grid. Organic-first, no paid boost on day 1 (let it breathe).</p><p><strong>Instagram (Static/Carousel):</strong> The Blueprint static. Material composition, features, the craft story in visual form. Swatches carousel showing available colours/washes.</p><p><strong>Instagram Stories:</strong> BTS from the film shoot. Snippets of the lead talent. "It's here" energy.</p><p><strong>LinkedIn:</strong> Minu's post drops with the "Making Of" video. "Two years ago we started working on something we were told not to touch."</p><p><strong>Threads:</strong> "We made jeans you can do a cartwheel in and honestly we're still not over it." Real-time engagement.</p><p><strong>X:</strong> Film clip + link. Monitor conversations. Engage with press/industry reactions.</p></div></div>
+
+<div class="cal-popup" id="d2"><button class="pc" onclick="closePopup()">&#10005;</button><div class="dl">Day 2 — Product Deep Dive</div><h4>Let the product speak for itself</h4><div><p><strong>Instagram (Reel):</strong> First styling reel. "3 ways to wear the straight leg" shot in someone's bedroom. 60 sec.</p><p><strong>Instagram (Carousel):</strong> Product detail carousel. Close-ups of stretch, pockets, stitching. Blueprint aesthetic with annotations.</p><p><strong>Stories:</strong> "This or that" on outfit pairings. Repost early UGC if any creators have posted.</p><p><strong>Threads:</strong> "What's the first thing you'd do in jeans you can actually move in?"</p><p><strong>Pinterest:</strong> First styling pins go up. "Denim for every mood" board created.</p></div></div>
+
+<div class="cal-popup" id="d3"><button class="pc" onclick="closePopup()">&#10005;</button><div class="dl">Day 3 — Movement Proof</div><h4>Prove the product truth</h4><div><p><strong>Instagram (Reel):</strong> First "Prove it moves" reel. The Equilibrium climbing gym collab. GoPro footage, real climbers, real movement. Up to 90 sec.</p><p><strong>Stories:</strong> Repost first wave of creator UGC.</p><p><strong>Threads:</strong> React to creator content. Conversational, on-the-go engagement.</p><p><strong>LinkedIn:</strong> First "pass the mic" employee post. The designer talks about the 47 iterations.</p></div></div>
+
+<div class="cal-popup" id="d4"><button class="pc" onclick="closePopup()">&#10005;</button><div class="dl">Day 4 — Community</div><h4>Let the people take over</h4><div><p><strong>Instagram (Reel):</strong> First creator-led UGC reel on our feed. Best performing seeded content gets reposted.</p><p><strong>Stories:</strong> Interactive content. More UGC reposts. Community reactions.</p><p><strong>Threads:</strong> We'll have a ready reckoner of what we can say but most of it will be spontaneous and in the moment.</p><p><strong>Paid:</strong> Start evaluating which organic creator content is performing best. Flag top performers for boosting starting Day 5.</p></div></div>
+
+<div class="cal-popup" id="d5"><button class="pc" onclick="closePopup()">&#10005;</button><div class="dl">Day 5 — Depth</div><h4>Go deeper on the craft</h4><div><p><strong>Instagram (Reel):</strong> The full "2 Years in the Making" BTS reel. 2-2.5 mins. Minu's voice, the factory, the fabric testing, the messy prototypes.</p><p><strong>Instagram (Carousel):</strong> Styling carousel. "5 ways to wear the bootcut" with each slide showing a different look. Save magnet.</p><p><strong>LinkedIn:</strong> Cross-post the Making Of reel with a different written angle.</p><p><strong>Paid:</strong> First boosted posts go live. Best-performing creator content gets amplified.</p></div></div>
+
+<div class="cal-popup" id="d6"><button class="pc" onclick="closePopup()">&#10005;</button><div class="dl">Day 6 — Movement</div><h4>Second wave of proof</h4><div><p><strong>Instagram (Reel):</strong> Second "Prove it moves" piece. The 24-hour stress test montage. Biking to work, office, cooking, gym, dinner.</p><p><strong>Stories:</strong> Repost second wave of creator content. Highlight organic UGC from real customers.</p><p><strong>Threads:</strong> Spontaneous engagement. React to what's happening in real time.</p><p><strong>LinkedIn:</strong> Second "pass the mic" employee post.</p></div></div>
+
+<div class="cal-popup" id="d7"><button class="pc" onclick="closePopup()">&#10005;</button><div class="dl">Day 7 — Style</div><h4>Styling meets community</h4><div><p><strong>Instagram (Reel):</strong> Second styling reel. Seasonal/occasion specific. "Monsoon-proof denim looks" or "office to date night in one pair." 60 sec.</p><p><strong>Instagram (Reel):</strong> Second creator UGC reel on feed.</p><p><strong>Stories:</strong> Poll results recap from pre-launch. "87% of you said you'd work out in denim. We see you."</p><p><strong>Pinterest:</strong> Second wave of pins. "Denim outfit ideas: airport edition."</p></div></div>
+
+<div class="cal-popup" id="d8"><button class="pc" onclick="closePopup()">&#10005;</button><div class="dl">Day 8 — Styling</div><h4>Deeper into the wardrobe</h4><div><p><strong>Instagram (Reel):</strong> Third styling reel. Different cut, different occasion.</p><p><strong>Instagram (Carousel):</strong> Detailed shoe-pairing guide. Which shoes work with which denim style. Save-worthy, Pinterest-crossover content.</p><p><strong>Stories &amp; Threads:</strong> Engagement and activities here will be spontaneous and customised as we recognise trends and patterns along the launch. But we keep these channels up and running everyday.</p></div></div>
+
+<div class="cal-popup" id="d9"><button class="pc" onclick="closePopup()">&#10005;</button><div class="dl">Day 9 — Creator</div><h4>Brand collaborations</h4><div><p><strong>Instagram (Reel):</strong> Third creator UGC reel. The brand collab piece (Kusha Kapila style cross-brand content if secured, or next best creator).</p><p><strong>Stories &amp; Threads:</strong> Spontaneous and customised as we recognise trends and patterns. Keep engagement live and active.</p><p><strong>Paid:</strong> Review boosted content performance. Double down on what's working.</p></div></div>
+
+<div class="cal-popup" id="d10"><button class="pc" onclick="closePopup()">&#10005;</button><div class="dl">Day 10 — Forward</div><h4>This was all just the beginning.</h4><div><p><strong>Instagram (Reel):</strong> Compilation reel. Best moments from the 10 days: film snippets, creator content, UGC, BTS, community reactions.</p><p><strong>Instagram (Carousel):</strong> Final styling carousel. A "complete denim wardrobe" guide featuring all cuts and washes.</p><p><strong>Stories &amp; Threads:</strong> Engagement and activities here will be spontaneous and customised as we recognise trends and patterns along the launch. But we keep these channels up and running everyday.</p><p><strong>LinkedIn:</strong> This was all just the beginning. Excited to see where this is headed.</p></div></div>
+
+<div class="divider"></div>
+
+<section class="fade-up">
+<div class="sub-heading">Deeper into further wonderments</div>
+
+<div class="highlight-box"><p><strong>Brand building vs product push:</strong> Every piece of content features the product, but the product is never the subject of the sentence. The subject is always the person wearing it! What they're doing, how they feel, allathat. Our brand and its language comes through via the way we think and speak in our content so it'll be context dependent how and where we build brand vs push products. Each piece will contain the denims but not in a way that feels templated. We want to incorporate it seamlessly with storytelling, in a way where we never lose the human-ness of our brand.</p></div>
+
+<div class="highlight-box"><p><strong>Trends vs original content:</strong> Trends are great but not foolproof. There are moments we can predict and some that just happen on the go. Making content for trending moments needs an automatic filter: is this trend relevant for us and our brand? Is it seeming like a forcefit? Are we just doing it because everyone else is? A good example is the "official apology statement" trend brands had hopped on. Everyone did it the same way. The question is always "ok even if we wanna do this, can we do it in a way where we can cut through the clutter but still participate in the conversation?" Brand banter is also a nice moment to show collaborative environments and how we communicate with other folks. It creates an "oooh" moment with audiences. But it needs to be organic and contextual, not performative. Love how Swiggy does this tbh.</p></div>
+
+<div class="highlight-box"><p><strong>Faces vs product-only content:</strong> Depends on the content and the platform really. Reels need faces. BTS is literally about people for people. Paid carousel ads can have a mix. But on Threads, you don't lean heavy on faces. We anthropomorphise the pants. Admin voice, essentially.</p></div>
+</section>
+
+<div class="divider"></div>
+
+<section class="fade-up">
+<div class="section-heading">Gauging Success</div>
+<p>Are people talking about my product positively? The price point conversation is inevitable. People will always find a way to complain about prices no matter how reasonable. What I'd want to lean into is conversations about how the product makes people feel. Are they talking about comfort? Are they surprised? Are they telling their friends? That sentiment shift from "oh Blissclub makes leggings" to "Blissclub makes denims and they're actually insane" is our win.</p>
+<p><strong>Objectively:</strong> What is our SOV in the denim conversation during the launch window, are we being talked alongside or instead of established denim brands? Search lift for "blissclub denims" during the 10 days, how much of our content led people to the website.</p>
+<p><strong>Subjectively:</strong> People will talk about us in any way; from engaging with our content through comments/DMs, creating content and tagging us unprompted, reviews, etc.</p>
+</section>
+
+<div class="divider"></div>
+
+<section class="fade-up">
+<span class="task-label">The Big Idea</span>
+<h2>Oof, now for the fun part.</h2>
+<p>You know how the Gap x Katseye video made waves and HOW. I personally think I watched it like 10+ times because of just how GOOD it was. Also, think of Jeremy Allen White's Calvin Klein campaign. Or Bad Bunny's. These honestly I've lost count how many times I've watched. <em>Ahem... anywayyyy...</em>*</p>
+<p>In that vein, where we mix recognizable music to a distinct vibe or movement, we can tap into nostalgia which is a major chunky cookie in Indian multimedia and culture, and do a stylised/choreographed ad film to a song like hmm, let's see what in my head seems like "confident, playful, dramatic, bold, assured.." Something like <strong>"Yehhh mera dil, pyaar ka deewana."</strong></p>
+<p>The old, og, retro version by Asha Bhosle, of course.</p>
+<p>I genuinely just have the video shot in my head right now. It looks and sounds SO good because I immediately relate with the recognition and warmth of the song. Mapping it so well with what these denims represent: move how you want, look how you want.</p>
+
+<div class="denim-card"><h4>The Talent</h4><p>A singular lead. Someone in the Radhika Apte category. Not too massy but well recognised and has reach. And is known for a particular vibe. Someone who embodies effortlessness.</p></div>
+
+<div class="denim-card"><h4>The Flow</h4>
+<div class="sb"><div class="st">0-5 sec</div><div class="sd">Opens with her waking up. Beginning her day. Morning light. The song starts playing on the speakers, soft at first.</div></div>
+<div class="sb"><div class="st">5-12 sec</div><div class="sd">Getting dressed. She pulls on the denim pants. They fit. They move. She catches herself in the mirror. The music builds.</div></div>
+<div class="sb"><div class="st">12-20 sec</div><div class="sd">She's out the door. Earphones in, the song travels with her. Sitting in the metro, vibing. Sipping coffee. There's a looseness to how she moves, a confidence. Choreography weaves in between the everyday.</div></div>
+<div class="sb"><div class="st">20-35 sec</div><div class="sd">Other women, noticeably in our denim wear, vibing with her. She's made her way to work. Cut to cut montage: powering through meetings, walking through the office, running down stairs. The denims in motion, always.</div></div>
+<div class="sb"><div class="st">35-45 sec</div><div class="sd">Post-work. Making time for chai. Heading to the gym. The 24-hour stress test in one continuous, rhythmic sequence. The denims go everywhere she goes.</div></div>
+<div class="sb"><div class="st">45-52 sec</div><div class="sd">Home. Shower. Gets ready for a date. Same denims? Different pair, same denim. She looks incredible. Music peaks.</div></div>
+</div>
+
+<p><strong>Distribution:</strong> Organic-first on Instagram. Cross-posted to LinkedIn with Minu's commentary on why they made this film. Threads gets the BTS: the casting, the choreographer's process, the song selection story. Even snippets featuring the lead herself.</p>
+</section>
+
+<div class="divider"></div>
+
+<section class="fade-up">
+<span class="task-label">Task 2</span>
+<div class="section-heading">Actual Content</div>
+
+<h3>Instagram Reel</h3>
+<p>The launch film described above. Organic-first on Instagram. Cross-posted to LinkedIn with Minu's commentary. Threads gets the BTS: the casting, the choreographer's process, the song selection story. Even snippets featuring the lead herself.</p>
+
+<h3>Static Posts</h3>
+<p>Two directions for statics: one blueprint-style creative showing material composition, construction details, and design features. One swatch/collage creative showing available colours, washes, and the editorial feel of the product.</p>
+<div class="ri"><img src="ref-nudie.jpeg" alt="Reference: editorial denim collage with material callouts"><img src="ref-blueprint.jpeg" alt="Reference: blueprint style with hand-drawn annotations"></div>
+<p><strong>Copy:</strong> "47 iterations later. 2 years of studying and learning and doing. A denim that moves with you. Here's what went into making it."</p>
+
+<h3>LinkedIn Post (in Minu's voice)</h3>
+<div class="highlight-box">
+<p>Two years ago we started working on something we were told not to touch.</p>
+<p>Denim. Saturated market. Tight margins. Everyone already has a pair. Why bother?</p>
+<p>Because everyone has a pair and most people have settled for how they feel. That was the insight.</p>
+<p>We spoke to hundreds of women. The same thing kept coming up: I love how denims look. I hate how they feel. The stiffness. The restricted movement. The waistband that digs in after lunch. The fact that you have to "break them in" like they're shoes and not pants.</p>
+<p>We thought: what if you didn't have to choose? What if denim could look like denim and feel like something we'd actually engineer at Blissclub?</p>
+<p>It took 47 fabric iterations. Two years of testing movement range, wash cycles, stretch recovery. We sourced materials that behave nothing like traditional denim but look exactly like it. Our design team tested these on dancers, climbers, cyclists, and people who just wanted to sit cross-legged on their couch without unbuttoning.</p>
+<p>Today we're launching Blissclub Denims.</p>
+<p>They look like jeans. They move like they were made for a body that actually does things.</p>
+<p>We started with one pair of black leggings. Four pockets. One SKU. The response from our community taught us that women don't want to compromise between looking good and feeling good.</p>
+<p>Denim was the hardest version of that problem. And we think we've solved it.</p>
+<p>This is just the start. Blissclub was never just an activewear company. We're building a wardrobe that respects how women actually live. Leggings were the first chapter. Denims are the next. There's more coming.</p>
+<p>Try them. Move in them. Tell us what you think.</p>
+</div>
+</section>
+
+<div class="divider"></div>
+
+<section class="fade-up">
+<span class="task-label">Task 3</span>
+<div class="section-heading">Data Analysis</div>
+<p>I'm going to provide my thought bubbles for all, then prio basis objective i.e. brand salience and creating presence and streamline a winner from there.</p>
+
+<div class="dg">
+<div class="dc w"><h4>Reel A</h4><div class="dm">500K views · Low saves</div><div class="dv">Great reach. 500K people were exposed to the brand. But low saves means the content was watchable but not bookmark-worthy. It did the awareness job but not the depth job. For presence specifically, this is valuable because salience is fundamentally a reach game. You can't remember a brand you never saw. But reach without recall is incomplete.</div></div>
+<div class="dc"><h4>Reel B</h4><div class="dm">100K views · High saves</div><div class="dv">Lower reach but high intent. Saves are the strongest signal that our brand is at least registered in someone's brain, so if it ever comes up, they're likely to remember having saved our asset. It's still not as much as 500K views which is what takes the cake in option A considering presence is our main game but I'm going to take this as a win and experiment towards reach a lot more.</div></div>
+<div class="dc"><h4>Static</h4><div class="dm">Low reach · High CTR</div><div class="dv">Sure this worked for us but the objective is not conversion. Good win though, carousels/statics generally outperform videos as paid ads. But low reach means not enough people saw it to move the needle on brand presence.</div></div>
+<div class="dc"><h4>Carousel</h4><div class="dm">Mid reach · High comments</div><div class="dv">This engaged people and sparked conversations, which is great for brand love and community building. Comments = people spending time with your brand, forming opinions, associating, but then again, mid reach limits its salience.</div></div>
+</div>
+
+<div class="highlight-box">
+<p><strong>The verdict:</strong> It's a tug of war between reels A and B. But I'm leaning towards reel A. 500K views beats 100K deep engagements when the objective is presence. I would however, study what made reel B save-worthy and apply those learnings to the next high reach piece.</p>
+<p>Tbh, a healthy content mix needs all formats working together basis what stage of the funnel it's in so this one was a bit of a head scratcher but our objective is presence so reel A does get my preference.</p>
+</div>
+</section>
+
+<div style="height:80px"></div>
+</div>
+
+<script>
+function openPopup(id){document.getElementById(id).classList.add('active');document.getElementById('overlay').classList.add('active');document.body.style.overflow='hidden'}
+function closePopup(){document.querySelectorAll('.cal-popup').forEach(p=>p.classList.remove('active'));document.getElementById('overlay').classList.remove('active');document.body.style.overflow=''}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closePopup()});
+const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add('visible')})},{threshold:.1});
+document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
